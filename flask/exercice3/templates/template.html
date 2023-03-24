@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="w3-container w3-light-grey">
+            <h2>{% if hour < 17 %}Bonjour {% else %}Bonsoir {% endif %}{{ name.title() }}</h2>
+        </div>
+        <div class="w3-panel w3-border-left">
+            <h4> Il est {{ time }}</h4>
+        </div>
+    </body>
+</html>

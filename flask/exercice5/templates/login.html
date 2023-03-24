@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmer vos informations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css')}}">
+</head>
+<body>
+    <h1>Confirmer vos informations:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Matière</th>
+                <th>Moyenne</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ mail }}</td>
+                <td>{{ matiere }}</td>
+                <td>{{ moyenne }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <form method="POST" action="/save">
+        <input maxlenght="64" value="{{ name }}" type="hidden" id="nom" name="nom" required>
+        <input maxlenght="64" value="{{ mail }}" type="hidden" id="email" name="email" required>
+        <input maxlenght="64" value="{{ matiere }}" type="hidden" id="matiere" name="matiere" required>
+        <input step="0.01" type="hidden" value="{{ moyenne }}"  max="20" min="0" id="moyenne" name="moyenne" required>
+        <button type="submit">Confirmer l'enregistrement</button>
+    </form>
+</body>
+</html>

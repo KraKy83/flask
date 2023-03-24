@@ -1,0 +1,60 @@
+/* Réinitialiser les styles par défaut des navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+
+/* Styles du conteneur principal */
+.w3-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.w3-light-grey {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Styles du titre */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Styles du panel */
+.w3-panel {
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.w3-border-left {
+    border-left: 3px solid #3498db;
+}
+
+
+/* Styles du contenu du panel */
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    }
+    
+    /* Ajouter un peu d'espace entre les sections */
+    .w3-panel + .w3-panel {
+    margin-top: 30px;
+    }

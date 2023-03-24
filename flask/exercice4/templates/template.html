@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="w3-container w3-light-grey">
+            {% if type == "deg" %}
+                <h2>Conversion en Celsius</h2>
+            {% elif type == "far" %}
+                <h2>Conversion en Fahrenheit</h2>
+            {% endif %}
+        </div>
+        <div class="w3-panel w3-border-left">
+            <h4>Il fait {{ temp }} {{ "°C" if type == "deg" else "°F" }}</h4>
+            {% if type == "deg" and temp > 25 %}
+                <p>Il fait chaud !</p>
+            {% elif type == "deg" and temp < 15 %}
+                <p>Il fait froid !</p>
+            {% elif type == "far" and temp > 77 %}
+                <p>Il fait chaud !</p>
+            {% elif type == "far" and temp < 59 %}
+                <p>Il fait froid !</p>
+            {% endif %}
+        </div>
+
+    </body>
+</html>
